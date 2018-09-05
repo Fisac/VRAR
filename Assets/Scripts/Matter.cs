@@ -7,11 +7,11 @@ public class Matter : ScriptableObject {
 
     public new string name;
 
-    public int weight;
+    public float mass;
 
     public int frictionMultiplier;
 
-    public bool destructable;
+    public bool isDestructable;
 
     public bool isPhysical;
 
