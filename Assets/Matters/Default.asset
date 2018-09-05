@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   name: Default
-  weight: 0
-  frictionMultiplier: 0
-  destructable: 0
-  isPhysical: 0
+  mass: 1000
+  frictionMultiplier: 1
+  isDestructable: 0
+  isPhysical: 1
   matterMaterial: {fileID: 0}
