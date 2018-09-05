@@ -6732,6 +6732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c419498e4154bd49a06af638a45f46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloomShader: {fileID: 4800000, guid: 88e68584b9cb5a34787a452126ce1574, type: 3}
+  iterations: 1
 --- !u!1 &1764123461
 GameObject:
   m_ObjectHideFlags: 0
