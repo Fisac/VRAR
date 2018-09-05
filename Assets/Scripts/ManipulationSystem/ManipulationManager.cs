@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class ManipulationManager : MonoBehaviour {
 
-    private GameObject[] prop;
+    private Manipulatable[] manipulatable;
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-        
-	}
+    private bool destroyed, moving, airborne;
+
+	public void CheckUpdatedValues(Manipulatable manipulatable)
+    {
+
+    }
+
+    private void UpdateObjects()
+    {
+
+    }
 }
