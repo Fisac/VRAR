@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour {
 
+    VRTK.VRTK_InteractableObject vrtkInteractable;
+
     public Matter matter;
 
     public List<Matter> matters;
@@ -12,12 +14,36 @@ public class InteractableObject : MonoBehaviour {
     Rigidbody objectRigidbody;
 
     public float mass;
-    public float maximumLiftWeight;
+    public float maximumLiftWeight = 4;
+
+    bool newMatter;
 
     void Start()
     {
+        UpdateProperties();
+    }
+
+    void Update()
+    {
+        if (newMatter)
+        {
+            UpdateProperties();
+        }
+    }
+
+    void UpdateMatter(Matter matter)
+    {
+        matter = this.matter;
+        newMatter = true;
+    }
+
+    void UpdateProperties()
+    {
         objectCollider = GetComponent<BoxCollider>();
         objectRigidbody = GetComponent<Rigidbody>();
+
+        mass = matter.mass;
+        objectRigidbody.mass = mass;
 
         Debug.Log("Name: " + matter.name);
         Debug.Log("Mass: " + matter.mass);
@@ -28,22 +54,17 @@ public class InteractableObject : MonoBehaviour {
 
         if (matter.mass > maximumLiftWeight)
         {
+            vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
         if (!matter.isPhysical)
         {
+            vrtkInteractable.isGrabbable = false;
             objectCollider.enabled = !objectCollider.enabled;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
-    }
 
-    void Update()
-    {
-        //if (messageRecieved)
-        //{
-        // update object with properties from scriptableObjects
-
-        //matter = matters[];
-        //}
+        newMatter = false;
+        Debug.Log("newMatter: " + newMatter);
     }
 }
