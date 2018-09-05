@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Manipulatable : MonoBehaviour {
 
-	void Start () {
-		
-	}
-	
+    public bool destroyed, moving, airborne;
+
 }
