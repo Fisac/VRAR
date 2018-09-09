@@ -3528,6 +3528,11 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 20938510069535118, guid: be540b97364be0a4890e39e62ac89ed1,
+        type: 2}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be540b97364be0a4890e39e62ac89ed1, type: 2}
   m_IsPrefabAsset: 0
@@ -6451,7 +6456,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: a41d15b54fe58dd46ba3f2613f587aa4, type: 2}
+  - {fileID: 2100000, guid: 6664f3f62f1a0d344a6be679542fb818, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6729,11 +6734,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696478704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c419498e4154bd49a06af638a45f46f, type: 3}
+  m_Script: {fileID: 11500000, guid: 913aae8a7ed181d488b3a75a03a45e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloomShader: {fileID: 4800000, guid: 88e68584b9cb5a34787a452126ce1574, type: 3}
-  iterations: 1
+  bloomShader: {fileID: 4800000, guid: d3c20ab1b75c8064382568294b4fba57, type: 3}
+  intensity: 0.78
+  iterations: 3
+  threshold: 0.12
+  softThreshold: 0.26
+  debug: 0
 --- !u!1 &1764123461
 GameObject:
   m_ObjectHideFlags: 0
@@ -7708,7 +7717,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: a7f3390d1c6e39249ade8282a83fca76, type: 2}
+  - {fileID: 2100000, guid: 6664f3f62f1a0d344a6be679542fb818, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
