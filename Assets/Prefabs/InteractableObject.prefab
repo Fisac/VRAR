@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114892473246849042}
   - component: {fileID: 114230053638123990}
   - component: {fileID: 114002307571776100}
+  - component: {fileID: 114582911719040546}
   m_Layer: 0
   m_Name: InteractableObject
   m_TagString: Untagged
@@ -192,6 +193,20 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &114582911719040546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690940619673468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f558a6fbe9c14ba289ab3d925271e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  moving: 0
+  airborne: 0
 --- !u!114 &114645571858156986
 MonoBehaviour:
   m_ObjectHideFlags: 1

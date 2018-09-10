@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65887299970244644}
   - component: {fileID: 114942183763823176}
   m_Layer: 0
-  m_Name: Hand
+  m_Name: HandUIPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

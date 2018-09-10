@@ -8,10 +8,10 @@ public class StatementsManager : MonoBehaviour {
 
     private void Update()
     {
-        //CheckStatements();
+        CheckStatement();
     }
 
-    public void CheckStatement(Statement statement)
+    public void CheckStatement()
     {
         foreach (var item in statements)
         {

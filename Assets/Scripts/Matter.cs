@@ -9,7 +9,7 @@ public class Matter : ScriptableObject {
 
     public float mass;
 
-    public int frictionMultiplier;
+    public float frictionMultiplier;
 
     public bool isDestructable;
 
