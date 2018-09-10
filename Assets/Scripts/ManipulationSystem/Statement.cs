@@ -9,13 +9,12 @@ public class Statement : MonoBehaviour {
 
     public Conditions destroyCondition, movingCondition, airborneCondition;
 
-    private void Update()
+    public bool TryStatement()
     {
-        if (CheckConditions())
-            Debug.Log("ALL CONDITIONS PASSED");
+        return CheckConditions();
     }
 
-    public bool CheckConditions()
+    private bool CheckConditions()
     {
         if (!TryCondition(destroyCondition, manipulatable.destroyed))
             return false;

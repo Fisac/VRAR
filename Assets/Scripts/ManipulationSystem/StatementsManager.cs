@@ -6,7 +6,7 @@ public class StatementsManager : MonoBehaviour {
 
     public Statement[] statements;
 
-    public void CheckStatements(Manipulatable manipulatable)
+    public void CheckStatements()
     {
 
     }
