@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Wireframe
-  m_Shader: {fileID: 4800000, guid: c6aedbea3f2b49647916e61cfc7b11a0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 61c28bdcc4e99784e873b8ec74464091, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
