@@ -8,12 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab9d88916d6bb2499ebb697072707ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c36989d97eff2b45b30f435e46eb976, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
   name: Default
-  mass: 5
+  mass: 1
   frictionMultiplier: 1
   isDestructable: 0
   isPhysical: 1
-  matterMaterial: {fileID: 0}
+  matterMaterial: {fileID: 2100000, guid: 53973b39fe8f80e48a9fa47ebb930707, type: 2}
