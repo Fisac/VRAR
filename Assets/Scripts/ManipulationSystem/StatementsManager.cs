@@ -2,21 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatementsManager : MonoBehaviour {
+public class StatementsManager : Singleton<StatementsManager> {
 
     public Statement[] statements;
 
-    private void Update()
+    public void CheckStatement(Statement statement)
     {
-        CheckStatement();
-    }
-
-    public void CheckStatement()
-    {
-        foreach (var item in statements)
-        {
-            if(item.TryStatement())
-                Debug.Log("YEE");
-        }
+        if(statement.TryStatement())
+            Debug.Log("YEE");
     }
 }
