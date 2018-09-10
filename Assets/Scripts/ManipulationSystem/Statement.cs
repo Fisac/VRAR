@@ -32,7 +32,7 @@ public class Statement : MonoBehaviour {
             }
         }
 
-        if(movingCondition != Conditions.Ignore)
+        if(airborneCondition != Conditions.Ignore)
         {
             if (!TryAirborne())
             {
