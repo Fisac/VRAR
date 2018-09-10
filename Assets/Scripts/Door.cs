@@ -24,6 +24,12 @@ public class Door : MonoBehaviour
         lerpTime += 0.5f * Time.deltaTime;
         doorTransform.position = new Vector3(doorTransform.position.x, doorTransform.position.y, Mathf.Lerp(doorStart, doorStop, lerpTime));
 
-        //Destroy(this);
+        StartCoroutine(DisableMeshRenderer());
+        GetComponent<MeshRenderer>().enabled = false;
+    }
+
+    IEnumerator DisableMeshRenderer()
+    {
+        yield return new WaitForSeconds(lerpTime);
     }
 }

@@ -5,71 +5,52 @@ using UnityEngine;
 public class Statement : MonoBehaviour {
 
     [SerializeField]
-    private Manipulatable manipulatable, wantedCondition, target, wantedTurnOut;
+    private Manipulatable manipulatable;
 
     public Conditions destroyCondition, movingCondition, airborneCondition;
 
-    private void Update()
+    public bool TryStatement()
     {
-        TryConditions();
+        return CheckConditions();
     }
 
-    public void TryConditions()
+    private bool CheckConditions()
     {
-        if(destroyCondition != Conditions.Ignore)
-        {
-            if (!TryDestroyed())
-            {
-                return;
-            }
-        }
-
-        if(movingCondition != Conditions.Ignore)
-        {
-            if (!TryMoving())
-            {
-                return;
-            }
-        }
-
-        if(airborneCondition != Conditions.Ignore)
-        {
-            if (!TryAirborne())
-            {
-                return;
-            }
-        }
-
-        Debug.Log("ALL CONDITIONS ARE MET");
-    }
-
-    public bool TryDestroyed()
-    {
-        if(manipulatable.destroyed == wantedCondition.destroyed)
-        {
-            return true;
-        }
-        else
-        {
+        if (!TryCondition(destroyCondition, manipulatable.destroyed))
             return false;
-        }
-    }
 
-    public bool TryMoving()
-    {
-        if (manipulatable.moving == wantedCondition.moving)
-        {
-            return true;
-        }
-        else
-        {
+        if (!TryCondition(movingCondition, manipulatable.moving))
             return false;
-        }
+
+        if (!TryCondition(airborneCondition, manipulatable.airborne))
+            return false;
+
+        return true;
     }
 
-    public bool TryAirborne()
+    private bool TryCondition(Conditions condition, bool conditionValue)
     {
-        if (manipulatable.airborne == wantedCondition.airborne)
+        bool testPassed = true;
+
+        switch (condition)
+        {
+            case Conditions.Ignore:
+                break;
+            case Conditions.True:
+                testPassed = TryStatement(conditionValue, true);
+                break;
+            case Conditions.False:
+                testPassed = TryStatement(conditionValue, false);
+                break;
+            default:
+                break;
+        }
+        return testPassed;
+    }
+
+    private bool TryStatement(bool statement, bool value)
+    {
+        if (statement == value)
         {
             return true;
         }
