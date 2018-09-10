@@ -6,4 +6,5 @@ public class Manipulatable : MonoBehaviour {
 
     public bool destroyed, moving, airborne;
 
+
 }

@@ -6,13 +6,17 @@ public class StatementsManager : MonoBehaviour {
 
     public Statement[] statements;
 
-    public void CheckStatements()
+    private void Update()
     {
-
+        //CheckStatements();
     }
 
-    private void UpdateObjects()
+    public void CheckStatement(Statement statement)
     {
-
+        foreach (var item in statements)
+        {
+            if(item.TryStatement())
+                Debug.Log("YEE");
+        }
     }
 }
