@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Matrix
-  m_Shader: {fileID: 4800000, guid: b3f44bc58f2f3bd4ab9bf879441fff09, type: 3}
+  m_Shader: {fileID: 4800000, guid: b7e744476afcadc45b5cffbe6c7d6e86, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,6 +18,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
-    m_Floats: []
+    m_Floats:
+    - _Density: 5
+    - _Grid: 30
+    - _SpeedMax: 20
+    - _SpeedMin: 2
     m_Colors:
     - Color_8E8C707B: {r: 0.5283022, g: 11.90812, b: 16, a: 0}
