@@ -343,6 +343,11 @@ MonoBehaviour:
     fallbackTypeName: VRTK.SDK_FallbackController
     typeName: VRTK.SDK_UnityController
     descriptionIndex: 1
+--- !u!1 &81920879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1883185261795400, guid: be540b97364be0a4890e39e62ac89ed1,
+    type: 2}
+  m_PrefabInternal: {fileID: 834945723}
 --- !u!1 &97694343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,12 +2081,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPopulateObjectReferences: 1
-  actualBoundaries: {fileID: 0}
-  actualHeadset: {fileID: 0}
-  actualLeftController: {fileID: 0}
-  actualRightController: {fileID: 0}
-  modelAliasLeftController: {fileID: 0}
-  modelAliasRightController: {fileID: 0}
+  actualBoundaries: {fileID: 685743491}
+  actualHeadset: {fileID: 1229359236}
+  actualLeftController: {fileID: 1535170241}
+  actualRightController: {fileID: 990832345}
+  modelAliasLeftController: {fileID: 822622268}
+  modelAliasRightController: {fileID: 81920879}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
@@ -2663,6 +2668,11 @@ Transform:
   m_Father: {fileID: 1194196363}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &685743491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013941130086, guid: be540b97364be0a4890e39e62ac89ed1,
+    type: 2}
+  m_PrefabInternal: {fileID: 834945723}
 --- !u!1 &691839925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,6 +3376,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 820094244}
   m_CullTransparentMesh: 0
+--- !u!1 &822622268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384746914293964, guid: be540b97364be0a4890e39e62ac89ed1,
+    type: 2}
+  m_PrefabInternal: {fileID: 834945723}
 --- !u!1 &825040646
 GameObject:
   m_ObjectHideFlags: 0
@@ -4257,6 +4272,11 @@ Transform:
   m_Father: {fileID: 1779888116}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &990832345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1391022766006510, guid: be540b97364be0a4890e39e62ac89ed1,
+    type: 2}
+  m_PrefabInternal: {fileID: 834945723}
 --- !u!1001 &1071097643
 Prefab:
   m_ObjectHideFlags: 0
@@ -4747,6 +4767,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1216915516}
   m_CullTransparentMesh: 0
+--- !u!1 &1229359236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1587602180963074, guid: be540b97364be0a4890e39e62ac89ed1,
+    type: 2}
+  m_PrefabInternal: {fileID: 834945723}
 --- !u!1 &1235073543
 GameObject:
   m_ObjectHideFlags: 0
@@ -6133,6 +6158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666f106f8ad384d499459fa8df2e9301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1535170241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538727058887424, guid: be540b97364be0a4890e39e62ac89ed1,
+    type: 2}
+  m_PrefabInternal: {fileID: 834945723}
 --- !u!1 &1548311925
 GameObject:
   m_ObjectHideFlags: 0

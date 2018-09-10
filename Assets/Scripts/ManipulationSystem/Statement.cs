@@ -11,10 +11,11 @@ public class Statement : MonoBehaviour {
 
     private void Update()
     {
-        GetConditions();
+        if (CheckConditions())
+            Debug.Log("ALL CONDITIONS PASSED");
     }
 
-    public bool GetConditions()
+    public bool CheckConditions()
     {
         if (!TryCondition(destroyCondition, manipulatable.destroyed))
             return false;
