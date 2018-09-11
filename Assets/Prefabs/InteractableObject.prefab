@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114230053638123990}
   - component: {fileID: 114002307571776100}
   - component: {fileID: 114582911719040546}
+  - component: {fileID: 114865514019401884}
   m_Layer: 0
   m_Name: InteractableObject
   m_TagString: Untagged
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690940619673468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.244, y: 1.5274549, z: 4.5000014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -204,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788f558a6fbe9c14ba289ab3d925271e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statement: {fileID: 0}
   destroyed: 0
   moving: 0
   airborne: 0
@@ -218,10 +220,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76362ee3568a4944aeddcd8c9ce3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matter: {fileID: 11400000, guid: 091c41536ff0edc4f8a46b1a95018840, type: 2}
+  matter: {fileID: 11400000, guid: 2d9739af79c58a0418153fbed3fca6ca, type: 2}
   matters: []
   mass: 0
   maximumLiftWeight: 4
+--- !u!114 &114865514019401884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690940619673468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c803b925df5fdef42ac8a8e0c7041377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionDuration: 0.5
 --- !u!114 &114892473246849042
 MonoBehaviour:
   m_ObjectHideFlags: 1
