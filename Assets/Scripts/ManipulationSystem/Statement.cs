@@ -9,6 +9,17 @@ public class Statement : MonoBehaviour {
 
     public Conditions destroyCondition, movingCondition, airborneCondition;
 
+    private void Start()
+    {
+        if(manipulatable != null)
+            ApplySelfToManipulatable();
+    }
+
+    private void ApplySelfToManipulatable()
+    {
+        manipulatable.statement = this;
+    }
+
     public bool TryStatement()
     {
         return CheckConditions();

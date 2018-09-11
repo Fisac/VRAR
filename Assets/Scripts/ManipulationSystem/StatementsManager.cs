@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class StatementsManager : Singleton<StatementsManager> {
 
-    public Statement[] statements;
-
     public void CheckStatement(Statement statement)
     {
         if(statement.TryStatement())
