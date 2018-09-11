@@ -722,7 +722,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4003531001671352, guid: 333ab8fbd31ec124f84a8bf6a8226116, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.4521124
+      value: 3.244
       objectReference: {fileID: 0}
     - target: {fileID: 4003531001671352, guid: 333ab8fbd31ec124f84a8bf6a8226116, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4370,6 +4370,23 @@ Transform:
   m_Father: {fileID: 1779888116}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1022163089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1690940619673468, guid: 333ab8fbd31ec124f84a8bf6a8226116,
+    type: 2}
+  m_PrefabInternal: {fileID: 118898722}
+--- !u!114 &1022163101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022163089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c803b925df5fdef42ac8a8e0c7041377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionDuration: 0.5
 --- !u!1001 &1071097643
 Prefab:
   m_ObjectHideFlags: 0
