@@ -17,23 +17,11 @@ public class MaterialManager : MonoBehaviour {
         rend.material = currentMatter.matterMaterial; 
        
     }
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-        ApplyNewMaterial();
-		
-	}
 
     public void ApplyNewMaterial()
     {
-        if(rend.material != currentMatter.matterMaterial)
-        {
-            rend.material = currentMatter.matterMaterial; 
-        }
+        currentMatter = interactable.matter; 
+        print("Change Material to: "+ currentMatter.matterMaterial);
+        rend.material = currentMatter.matterMaterial; 
     }
 }
