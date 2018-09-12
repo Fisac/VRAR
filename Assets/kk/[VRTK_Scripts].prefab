@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 114191052500637938}
   - component: {fileID: 114692928920532164}
   - component: {fileID: 114216208658252044}
+  - component: {fileID: 114385818259596156}
   m_Layer: 0
   m_Name: LeftControllerScriptAlias
   m_TagString: Untagged
@@ -858,6 +859,7 @@ GameObject:
   - component: {fileID: 114392970635095760}
   - component: {fileID: 114776223058425760}
   - component: {fileID: 114125304251291068}
+  - component: {fileID: 114841026297520502}
   m_Layer: 0
   m_Name: RightControllerScriptAlias
   m_TagString: Untagged
@@ -3160,6 +3162,35 @@ MonoBehaviour:
   smoothsScale: 0
   maxAllowedPerFrameSizeDifference: 0.003
   _moment: 2
+--- !u!114 &114385818259596156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312690991415852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b26f999cbdac8478b6c2a046256169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationButton: 10
+  activationMode: 0
+  selectionButton: 3
+  clickMethod: 0
+  attemptClickOnDeactivate: 0
+  clickAfterHoverDuration: 0
+  maximumLength: Infinity
+  attachedTo: {fileID: 0}
+  controllerEvents: {fileID: 0}
+  customOrigin: {fileID: 0}
+  controller: {fileID: 0}
+  pointerOriginTransform: {fileID: 0}
+  hoveringElement: {fileID: 0}
+  controllerRenderModel: {fileID: 0}
+  hoverDurationTimer: 0
+  canClickOnHover: 0
+  autoActivatingCanvas: {fileID: 0}
+  collisionClick: 0
 --- !u!114 &114392970635095760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3484,7 +3515,7 @@ MonoBehaviour:
   selectOnPress: 0
   selectionDelay: 0
   selectAfterHoverDuration: 0
-  interactWithObjects: 0
+  interactWithObjects: 1
   grabToPointerTip: 0
   attachedTo: {fileID: 0}
   controllerEvents: {fileID: 0}
@@ -3532,6 +3563,35 @@ MonoBehaviour:
   controllerAttachPoint: {fileID: 0}
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
+--- !u!114 &114841026297520502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529658185783698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b26f999cbdac8478b6c2a046256169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationButton: 10
+  activationMode: 0
+  selectionButton: 3
+  clickMethod: 0
+  attemptClickOnDeactivate: 0
+  clickAfterHoverDuration: 0
+  maximumLength: Infinity
+  attachedTo: {fileID: 0}
+  controllerEvents: {fileID: 0}
+  customOrigin: {fileID: 0}
+  controller: {fileID: 0}
+  pointerOriginTransform: {fileID: 0}
+  hoveringElement: {fileID: 0}
+  controllerRenderModel: {fileID: 0}
+  hoverDurationTimer: 0
+  canClickOnHover: 0
+  autoActivatingCanvas: {fileID: 0}
+  collisionClick: 0
 --- !u!114 &114867450194560966
 MonoBehaviour:
   m_ObjectHideFlags: 1
