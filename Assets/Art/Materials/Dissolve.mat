@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Floof
+  m_Name: Dissolve
   m_Shader: {fileID: 4800000, guid: af4fd1292cd5c264f989a0dc0e21c9ed, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
