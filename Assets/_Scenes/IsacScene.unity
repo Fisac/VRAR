@@ -3454,6 +3454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statement: {fileID: 0}
+  colliders: []
   destroyed: 0
   moving: 0
   airborne: 0
@@ -3832,6 +3833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statement: {fileID: 0}
+  colliders: []
   destroyed: 0
   moving: 0
   airborne: 0
@@ -4059,6 +4061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statement: {fileID: 0}
+  colliders: []
   destroyed: 0
   moving: 0
   airborne: 0

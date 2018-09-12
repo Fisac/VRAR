@@ -8,6 +8,7 @@ public class Manipulatable : MonoBehaviour {
     [HideInInspector]
     public Statement statement;
     private Rigidbody rigidBody;
+    public List<GameObject> colliders = new List<GameObject>();
 
     public bool destroyed, moving, airborne;
 
@@ -16,9 +17,27 @@ public class Manipulatable : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (rigidBody == null)
+        {
+            SetKinematicValues();
+            return;
+        }
+        if (rigidBody.isKinematic)
+        {
+            SetKinematicValues();
+            return;
+        }
         CheckMovement();
+        CheckAirborne();
+        UpdateValues();
+    }
+
+    private void SetKinematicValues()
+    {
+        moving = false;
+        airborne = false;
     }
 
     private void CheckMovement()
@@ -31,7 +50,14 @@ public class Manipulatable : MonoBehaviour {
         else
             moving = false;
 
-        UpdateValues();
+    }
+
+    private void CheckAirborne()
+    {
+        if (colliders.Count == 0)
+            airborne = true;
+        else
+            airborne = false;
     }
 
     public void UpdateValues()
@@ -40,15 +66,16 @@ public class Manipulatable : MonoBehaviour {
             StatementsManager.Instance.CheckStatement(statement);
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        airborne = false;
-        UpdateValues();
+        //Debug.Log("COLLIDER IS: " + collision.gameObject);
+        if(!colliders.Contains(collision.gameObject))
+            colliders.Add(collision.gameObject);
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        airborne = true;
-        UpdateValues();
+        if(colliders.Contains(collision.gameObject))
+            colliders.Remove(collision.gameObject);
     }
 }
