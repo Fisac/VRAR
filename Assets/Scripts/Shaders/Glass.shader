@@ -2,59 +2,57 @@
 {
 	Properties
 	{
-		_MainTex ("Base(RGB)", 2D) = "white" {}
-
-		_Color("Transparency (Alpha only)", Color) = (0.5, 0.5, 0.5, 1);
+		_MainTex("Base(RGB)", 2D) = "white" {}
+		_Color("Transparency (Alpha only)", Color) = (0.5, 0.5, 0.5, 1)
+		_Cube("Reflection Cubemap", Cube) = "Skybox" {TexGen CubeReflect}
+		_ReflectColor("Reflection Color", Color) = (1, 1, 1, 0.5)
+		_ReflectBrightness("Reflection Brightness", Float) = 1.0
+		_SpecularMap("Specular/Reflection Map", 2D) = "White" {}
+		_RimColor("Rim Color", Color) = (0.26, 0.19, 0.16, 0.0)
 	}
-	SubShader
+		SubShader
 	{
-		Tags { "RenderType"="Opaque" }
-		LOD 100
+		Tags {
+		"Queue" = "Transparent"
+		"IgnoreProjector" = "True"
+		"RenderType" = "Transparent" }
 
-		Pass
+		CGPROGRAM
+		#pragma surface surf BlinnPhong alpha
+
+		sampler2D _MainTex;
+		sampler2D _SpecularMap;
+		samplerCUBE _Cube;
+		fixed4 _ReflectColor;
+		fixed _ReflectBrightness;
+		fixed4 _Color;
+		float4 _RimColor;
+
+		struct Input {
+			float2 uv_MainTex;
+			float3 worldRefl;
+			float3 viewDir;
+		};
+
+		void surf(Input IN, inout SurfaceOutput o)
 		{
-			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
-			
-			#include "UnityCG.cginc"
+			half4 c = tex2D(_MainTex, IN.uv_MainTex);
+			o.Albedo = c.rgb;
 
-			struct appdata
-			{
-				float4 vertex : POSITION;
-				float2 uv : TEXCOORD0;
-			};
+			o.Alpha = _Color.a * c.a;
 
-			struct v2f
-			{
-				float2 uv : TEXCOORD0;
-				UNITY_FOG_COORDS(1)
-				float4 vertex : SV_POSITION;
-			};
+			half specular = tex2D(_SpecularMap, IN.uv_MainTex).r;
+			o.Specular = specular;
 
-			sampler2D _MainTex;
-			float4 _MainTex_ST;
-			
-			v2f vert (appdata v)
-			{
-				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
-				return o;
-			}
-			
-			fixed4 frag (v2f i) : SV_Target
-			{
-				// sample the texture
-				fixed4 col = tex2D(_MainTex, i.uv);
-				// apply fog
-				UNITY_APPLY_FOG(i.fogCoord, col);
-				return col;
-			}
-			ENDCG
+			fixed4 reflcol = texCUBE(_Cube, IN.worldRefl);
+			reflcol *= c.a;
+			o.Emission = reflcol.rgb * _ReflectColor.rgb * _ReflectBrightness;
+			o.Alpha = o.Alpha * _ReflectColor.a;
+
+			half intensity = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));
+			o.Emission += intensity * _RimColor.rgb;
 		}
+		ENDCG
 	}
+		FallBack "DiffuseS"
 }
