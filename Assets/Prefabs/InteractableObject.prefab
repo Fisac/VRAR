@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23298259272956574}
   - component: {fileID: 65347118982247668}
   - component: {fileID: 54925823305099478}
-  - component: {fileID: 114645571858156986}
   - component: {fileID: 114455188330243750}
   - component: {fileID: 114892473246849042}
   - component: {fileID: 114230053638123990}
@@ -31,6 +30,7 @@ GameObject:
   - component: {fileID: 114582911719040546}
   - component: {fileID: 114402561593326390}
   - component: {fileID: 114273837759863332}
+  - component: {fileID: 114853330242709508}
   m_Layer: 0
   m_Name: InteractableObject
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53973b39fe8f80e48a9fa47ebb930707, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   destroyed: 0
   moving: 0
   airborne: 0
---- !u!114 &114645571858156986
+--- !u!114 &114853330242709508
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1690940619673468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76362ee3568a4944aeddcd8c9ce3248, type: 3}
+  m_Script: {fileID: 11500000, guid: 1570a989f50d8cb44959bb81b3b075e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   matter: {fileID: 11400000, guid: 091c41536ff0edc4f8a46b1a95018840, type: 2}
