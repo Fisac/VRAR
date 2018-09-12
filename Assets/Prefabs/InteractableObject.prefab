@@ -29,8 +29,8 @@ GameObject:
   - component: {fileID: 114230053638123990}
   - component: {fileID: 114002307571776100}
   - component: {fileID: 114582911719040546}
-  - component: {fileID: 114865514019401884}
-  - component: {fileID: 114285700121271064}
+  - component: {fileID: 114402561593326390}
+  - component: {fileID: 114273837759863332}
   m_Layer: 0
   m_Name: InteractableObject
   m_TagString: Untagged
@@ -114,7 +114,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690940619673468}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1dc3c432b7ec21641a3d100a3dab0982, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114285700121271064
+--- !u!114 &114273837759863332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +171,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1690940619673468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7517ffeb0af8914482a108d591abc70, type: 3}
+  m_Script: {fileID: 11500000, guid: d2aa8d7dc5c1d8444ac9724e0a484a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionDuration: 0
+--- !u!114 &114402561593326390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690940619673468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0804bd16998084a81745040ab6448e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114455188330243750
@@ -218,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statement: {fileID: 0}
+  colliders: []
   destroyed: 0
   moving: 0
   airborne: 0
@@ -232,22 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76362ee3568a4944aeddcd8c9ce3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matter: {fileID: 11400000, guid: 2d9739af79c58a0418153fbed3fca6ca, type: 2}
+  matter: {fileID: 11400000, guid: 091c41536ff0edc4f8a46b1a95018840, type: 2}
   matters: []
   mass: 0
   maximumLiftWeight: 4
---- !u!114 &114865514019401884
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690940619673468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c803b925df5fdef42ac8a8e0c7041377, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionDuration: 0.5
 --- !u!114 &114892473246849042
 MonoBehaviour:
   m_ObjectHideFlags: 1
